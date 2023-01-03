@@ -1,0 +1,180 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat:500');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.sticky {
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+.info{
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.info a, i{
+    color: red;
+    font-size: 17px;
+}
+.info a:hover, i:hover{
+    color: black;
+}
+.info-left{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-basis: 33%;
+    margin-left: 300px;
+    justify-content: space-between;
+}
+.info-left .r:hover{
+    color: black;
+}
+.info-left label{
+    color: lightgray;
+}
+.info-right{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-basis: 67%;
+    margin-left: 600px;
+}
+.link-p a{
+    margin: 0 5px;
+}
+.link-p label{
+    color: lightgray;
+}
+.info-links{
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 1px solid lightgray;
+}
+.info-links a{
+    margin: 0 5px;
+}
+.nav{
+    max-width: 100%;
+    height: 110px;
+    background-color: #da3838;
+    align-items: center;
+    padding: 50px 15%;
+    position: relative;
+}
+.home i{
+    color: white;
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav,
+.nav-link1,
+.nav-link2 {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.nav-link2{
+    margin-left: 300px;
+}
+a, button{
+    white-space: nowrap;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.dropdown-selected a{
+    color: white;
+    padding: 5px 10px;
+}
+.dropdown-selected i{
+    color: white;
+}
+.dropdown-selected a:hover{
+    border: 1px solid #b03232;
+    border-radius: 50px;
+    background-color: #f11010;
+}
+.link-item a{
+    color: white;
+    padding: 5px 10px;
+}
+.link-item a:hover{
+    border: 1px solid #b03232;
+    border-radius: 50px;
+    background-color: #f11010;
+}
+.nav .logo{
+    display: inline-block;
+    margin: -55px 50px 0 50px;
+    background-color: white;
+    width: 200px;
+    height: 135px;
+    box-shadow: 0px 5px 10px 0px #888888;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 300ms ease;
+    padding: 5px;
+    position: absolute;
+    z-index: 0;
+}
+.logo:hover{
+    width: 185px;
+    height: 125px;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-list{
+    margin-top: 1rem;
+    border-radius: 4px;
+    background-color: white;
+    padding: 0 10px 10px 10px;
+    box-shadow: 0 1px 6px 0 rgba(138, 138, 138, 0.5);
+    position: absolute;
+    top: 100%;
+    display: none;
+    z-index: 1;
+}
+.dropdown-list:before{
+    content: "";
+    height: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transform: translateY(-100%);
+}
+.dropdown:hover .dropdown-list{
+    display: block;
+}
+.dropdown-item{
+    width: 220px;
+    padding: 0.7rem;
+    background-color: transparent;
+    color: gray;
+    font-size: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.dropdown-item:first-child{
+    position: relative;
+}
+.dropdown-item:first-child:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    transform: translateY(-100%);
+}
